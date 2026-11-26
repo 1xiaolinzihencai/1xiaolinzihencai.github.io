@@ -1,0 +1,26 @@
+name: import-app
+on:
+  push:
+    paths:
+      - '.github/workflows/import-app.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: download files
+        run: |
+          curl -fsSL -o app.html 'https://aka.doubaocdn.com/s/EzDgtlbV08'
+          curl -fsSL -o icon.svg 'https://aka.doubaocdn.com/s/9XdwM29gkL'
+          curl -fsSL -o manifest.json 'https://aka.doubaocdn.com/s/CI1bHW7RC9'
+          ls -l app.html icon.svg manifest.json
+      - name: commit files
+        run: |
+          git config user.name 'import-bot'
+          git config user.email 'bot@users.noreply.github.com'
+          git add app.html icon.svg manifest.json
+          git diff --cached --quiet || git commit -m 'import app files from cdn'
+          git push
