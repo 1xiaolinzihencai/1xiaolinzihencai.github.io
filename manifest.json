@@ -1,7 +1,7 @@
 {
-  "name": "小菜谱 · 我们的厨房",
-  "short_name": "小菜谱",
-  "description": "自己记菜谱、按菜名搜、按食材反查能做什么。",
+  "name": "小猪和小贝的厨房",
+  "short_name": "小猪小贝",
+  "description": "小猪和小贝的私房菜谱：自己记菜、按菜名搜、按食材反查能做什么。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
