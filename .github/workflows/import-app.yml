@@ -13,9 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: download files
         run: |
-          curl -fsSL -o app.html 'https://aka.doubaocdn.com/s/EzDgtlbV08'
+          curl -fsSL -o app.html 'https://aka.doubaocdn.com/s/YbMYtUi25d'
           curl -fsSL -o icon.svg 'https://aka.doubaocdn.com/s/9XdwM29gkL'
-          curl -fsSL -o manifest.json 'https://aka.doubaocdn.com/s/CI1bHW7RC9'
+          curl -fsSL -o manifest.json 'https://aka.doubaocdn.com/s/859Fc3sTod'
           ls -l app.html icon.svg manifest.json
       - name: commit files
         run: |
